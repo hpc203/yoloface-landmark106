@@ -1,3 +1,5 @@
 # 纯YOLO系列的人脸检测+106个关键点检测
 在本套程序中，检测人脸和检测关键点都使用yolo网络，并且检测输出106个人脸关键点，比PFLD要多出10个，
-整个程序的运行只依赖Opencv和numpy
+整个程序的运行只依赖Opencv和numpy，主程序是detect_img.py
+此外，我还添加了PFLD检测106个关键点的程序，依然是使用opencv的dnn模块加载.onnx文件做前向推理的，
+主程序是yolo_pfld106.py
