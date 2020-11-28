@@ -117,7 +117,7 @@ if __name__ == "__main__":
         face_roi = srcimg[i[1]:i[3], i[0]:i[2]]
         points = forward_landmark(landmark_net, face_roi, i)
         draw_point(srcimg, points)
-
+        print('detect', int(points.size * 0.5), 'points')
         cv2.rectangle(srcimg, (i[0], i[1]), (i[2], i[3]), (255, 255, 0), 2)
     cv2.namedWindow('detect', cv2.WINDOW_NORMAL)
     cv2.imshow('detect', srcimg)
